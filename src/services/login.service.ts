@@ -21,7 +21,7 @@ export class LoginService {
 
 
   cadastrar(login: LoginModel): Observable<LoginModel>{
-    return this.http.post<LoginModel>(this.apiURL + '/api/user/cadastrar', JSON.stringify(login), this.httpOptions);
+    return this.http.post<LoginModel>(this.apiURL + '/api/usuario/cadastrar', JSON.stringify(login), this.httpOptions);
   }
 
   autenticar(){}
