@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <div class="container custom-container">
+            <div class="col-md-8">
+              <h3 class="mb-3 text-center">Efetuar Login</h3>
+              <form>            
+                    <label for="email" class="control-label">E-mail:</label>
+                    <input type="e-mail" min=6 id="email" [(ngModel)]="usuario.email" name="email" class="form-control" placeholder="example@email.com" required>
+
+                      <label for="senha" class="control-label">Senha:</label>
+                    <input type="password" min=6 id="senha" [(ngModel)]="usuario.senha" name="senha" class="form-control" placeholder="Digite sua senha" required>
+                    <br>
+                  <div class="form-group">
+                    <button class="btn btn-success btn-lg btn-block" (click)="efetuarLogin(usuario)">Entrar</button>
+                  </div>
+              </form>
+              <span>Não é Cadastrado? Realize seu cadastro </span> <a routerLink="/cadastrar">Aqui!</a>
+            </div>
+        </div>
+    </body>
+</html>

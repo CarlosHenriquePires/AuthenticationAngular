@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { LoginService } from 'src/services/login.service';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CadastrarComponent
+    CadastrarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

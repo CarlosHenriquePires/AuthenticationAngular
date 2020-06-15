@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class LoginService {
 
-  apiURL: string = 'http://localhost:3000'
+  apiURL: string = 'http://localhost:3000';
 
   constructor(public http: HttpClient) { }
 
@@ -24,5 +24,7 @@ export class LoginService {
     return this.http.post<LoginModel>(this.apiURL + '/api/usuario/cadastrar', JSON.stringify(login), this.httpOptions);
   }
 
-  autenticar(){}
+  autenticar(login: LoginModel): Observable<LoginModel>{
+    return this.http.post<LoginModel>(this.apiURL + '/api/usuario/login', JSON.stringify(login), this.httpOptions);
+  }
 }
