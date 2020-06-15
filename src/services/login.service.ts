@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 export class LoginService {
 
   apiURL: string = 'http://localhost:3000';
+  logado: boolean = false;
 
   constructor(public http: HttpClient) { }
 
