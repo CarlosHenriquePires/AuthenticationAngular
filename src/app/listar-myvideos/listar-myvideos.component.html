@@ -1,0 +1,19 @@
+
+<div class="container">
+    <!-- Grid row -->
+        <div class="row">
+            <!-- Grid column -->
+            <div class="col-lg-4 col-md-12 mb-4" *ngFor="let myvideos of MyVideos">
+                <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                    <iframe class="embed-responsive-item" [src]="myvideos.link | safe" allowfullscreen></iframe>
+                </div>
+                <h6 class="card-text">Categoria: {{myvideos.categoria}}</h6>
+                <div class="card-body">
+                    <p class="card-text">Descrição: {{myvideos.descricao}}</p>
+                </div>
+            <!-- Grid column --> 
+            </div>
+        <!-- Grid row -->
+        </div>
+    </div>
+    

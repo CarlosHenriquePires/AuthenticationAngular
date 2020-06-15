@@ -8,13 +8,18 @@ import { AppComponent } from './app.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { LoginService } from 'src/services/login.service';
 import { LoginComponent } from './login/login.component';
+import { PagesGuard } from './guards/pages.guard';
+import { ListarMyvideosComponent, SafePipe } from './listar-myvideos/listar-myvideos.component';
+import { MyvideosService } from 'src/services/myvideos.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CadastrarComponent,
-    LoginComponent
+    SafePipe,
+    LoginComponent,
+    ListarMyvideosComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +27,7 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [LoginService],
+  providers: [LoginService, PagesGuard, MyvideosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

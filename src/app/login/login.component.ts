@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('nome', this.dadosUsuario.nome);
         localStorage.setItem('email', this.dadosUsuario.email);
         this.loginService.logado = true;
-        this.route.navigate(['cadastrar']);
+        this.route.navigate(['listarMyVideos']);
       }else{
         this.route.navigate(['']);
       }
